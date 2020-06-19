@@ -51,115 +51,28 @@
 
 
 
-<div class="card-deck">
-    <div class="card">
-      <img src="images/download1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">William Shakespeare</h5>   
-        <p class="card-text">William Shakespeare was an English poet, playwright, and actor, widely regarded as the greatest writer in the English language and the world's greatest dramatist. He is often called England's national poet and the "Bard of Avon".</p>
-        <a href="https://en.wikipedia.org/wiki/William_Shakespeare" class="btn btn-primary">See Profile</a>
-      </div> 
-    </div>
-    <div class="card">
-        <img src="images/download2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Charles Dickens</h5>        
-          <p class="card-text">Charles John Huffam Dickens FRSA was an English writer and social critic. He created some of the world's best-known fictional characters and is regarded by many as the greatest novelist of the Victorian era.</p>
-          <a href="https://en.wikipedia.org/wiki/Charles_Dickens" class="btn btn-primary">See Profile</a>
-        </div> 
-      </div>
-      <div class="card">
-        <img src="images/download3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Arundhati Roy</h5>
-          <p class="card-text">Suzanna Arundhati Roy is an Indian author best known for her novel The God of Small Things, which won the Man Booker Prize for Fiction in 1997 and became the best-selling book by a non-expatriate Indian author. She is also a political activist involved in human rights and environmental causes.</p>
-          <a href="https://en.wikipedia.org/wiki/Arundhati_Roy" class="btn btn-primary">See Profile</a>
-        </div> 
-      </div>
-      <div class="card">
-        <img src="images/download4.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Henry James</h5>
-          <p class="card-text">Henry James OM was an American-British author regarded as a key transitional figure between literary realism and literary modernism, and is considered by many to be among the greatest novelists in the English language. </p>
-          <a href="https://en.wikipedia.org/wiki/Henry_James" class="btn btn-primary">See Profile</a>
-        </div> 
-      </div>
-  </div>
-  <br>
-  <br>
+<<div class="col-md-6" style="margin-top: 3%; width: 100rem; margin-left: 20%;">
+  <%for(i=0;i<author.length;i++){%>
 
-  <div class="card-deck">
-    <div class="card">
-      <img src="images/download5.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Stephenie Meyer</h5>
-        <p class="card-text">Stephenie Meyer is best known for authoring the Twilight book series, which was later adapted for a film franchise.</p>
-        <a href="https://www.biography.com/writer/stephenie-meyer" class="btn btn-primary">See Profile</a>
-      </div> 
+  <div class="card mb-3 bg-custom-1">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="/images/<%=author[i].img%>" class="card-img img-fluid img-thumbnail  float-right" alt="img 1" style="margin-top: 10%; margin-bottom: 10%; width: 9rem; height: 9.3rem;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body"><br>
+          <h5 class="card-title1"><%=author[i].author%></h5>
+          <p class="card-text1"><%=author[i].dob%></p>        
+          <button class="btn btn-light text-center d-block" style="font-family: monospace; font-size: 14px; margin-left: 35%;">
+          <a href="/author/<%=i%>">More Info</a></button>
+      </div>
+      </div>
     </div>
-    <div class="card">
-        <img src="images/download6.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Robert Bryndza</h5>
-          <p class="card-text">Robert Bryndza began his career training at the Guildford School of Acting. He spent six years as an actor, doing all kinds of strange jobs in between, which was the perfect training for being an author.</p>
-          <a href="https://robertbryndza.com/" class="btn btn-primary">See Profile</a>
-        </div> 
-      </div>
-      <div class="card">
-        <img src="images/download7.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Susan Hill</h5>
-          <p class="card-text">Susan Hill, CBE (born 5 February 1942) is an English author of fiction and non-fiction works. Her novels include The Woman in Black, The Mist in the Mirror and I'm the King of the Castle for which she received the Somerset Maugham Award in 1971. </p>
-          <a href="https://en.wikipedia.org/wiki/Susan_Hill" class="btn btn-primary">See Profile</a>
-        </div> 
-      </div>
-      <div class="card">
-        <img src="images/download8.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Rachel Caine</h5>
-          <p class="card-text">Rachel Caine is a pen name of Roxanne Longstreet Conrad, an American writer of science fiction, fantasy, mystery, suspense, and horror novels. She also publishes media tie-in novels as Julie Fortune.</p>
-          <a href="https://en.wikipedia.org/wiki/Rachel_Caine" class="btn btn-primary">See Profile</a>
-        </div> 
-      </div>
+    
   </div>
-<br>
-<br>
+  <%}%>
 
-  <div class="card-deck">
-    <div class="card">
-      <img src="images/download9.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Ernest Miller Hemingway</h5>
-        <p class="card-text">Ernest Miller Hemingway was an American journalist, novelist, short-story writer, and sportsman. His economical and understated style—which he termed the iceberg theory—had a strong influence on 20th-century fiction, while his adventurous lifestyle and his public image brought him admiration from later generations.</p>
-        <a href="https://en.wikipedia.org/wiki/Ernest_Hemingway" class="btn btn-primary">See Profile</a>
-      </div> 
-    </div>
-    <div class="card">
-        <img src="images/download10.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Leo Tolstoy</h5>
-         <p class="card-text">Count Lev Nikolayevich Tolstoy, usually referred to in English as Leo Tolstoy, was a Russian writer who is regarded as one of the greatest authors of all time.</p>
-         <a href="https://en.wikipedia.org/wiki/Leo_Tolstoy" class="btn btn-primary">See Profile</a>
-        </div> 
-      </div>
-      <div class="card">
-        <img src="images/download11.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">J.K. Rowling</h5>
-          <p class="card-text">Joanne Rowling CH, OBE, HonFRSE, FRCPE, FRSL, better known by her pen name J. K. Rowling, is a British author, film producer, television producer, screenwriter, and philanthropist.</p>
-          <a href="https://www.jkrowling.com/about/" class="btn btn-primary">See Profile</a>
-        </div> 
-      </div>
-      <div class="card">
-        <img src="images/download12.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Anton Pavlovich Chekhov</h5>
-          <p class="card-text">Anton Pavlovich Chekhov was a Russian playwright and short-story writer who is considered to be among the greatest writers of short fiction in history. His career as a playwright produced four classics, and his best short stories are held in high esteem by writers and critics. </p>
-          <a href="https://en.wikipedia.org/wiki/Anton_Chekhov" class="btn btn-primary">See Profile</a>
-        </div> 
-      </div>
-  </div>
-
+</div>
 <br>
 <br>
 

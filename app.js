@@ -3,15 +3,14 @@ const app = express();
 const nav =
 [
     {
-        link:'/ebooks',name:'BOOKS'
+        link:'/books',name:'BOOKS'
     }, 
     
-   
     {
-        link:'/authors',name:'AUTHORS'
+        link:'/author',name:'AUTHORS'
     }, 
     
-    
+  
 ];
 const navSign =
 [
