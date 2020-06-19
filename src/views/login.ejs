@@ -31,7 +31,7 @@
       </ul>           
     </div>    
       </nav>
-      
+
       <h1>
         <div class="scroll-left ">
           <p>LOG IN</p>
@@ -88,31 +88,32 @@
         
           </div>
           <div class="col-md-6" style="color: green; border: whitesmoke solid;">            
-            <form action="/index" onsubmit=" return validate()">
-              <h3>Member LogIn</h3>     
-              <div class="form-group">      
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="text" placeholder="Enter email address here" class="form-control" id="email"  aria-describedby="emailHelp" required>
-                <span id="emailerror" style="color: red; font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;" > </span><br> <br>
-
-                </div>
-              
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" id="pwd" placeholder="Enter password here" class="form-control"  required>
-                <span id="pwds" style="color: red;  font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;" > </span><br> <br>
+            
+           <form id="log" action="home.html" onsubmit="return validate()">
+             <h1> login</h1>
+             <div class="form-group">
+              <label for="inputEmail">Username</label>
+              <input type="text" class="form-control" id="inputEmail" placeholder="Email address">
+            </div>
+             <div class="form-group">
+              <label for="InputPassword1">Password</label>
+              <input type="password" class="form-control" id="InputPassword1" placeholder="password">
+             </div>
+             <div class="form-group form-check">
+               <input type="checkbox" class="form-check-input" id="exampleCheck1">
+               <label class="form-check-label" for="exampleCheck1">Remember me</label>
+             </div>
+         
+             <div class="forgot float-right">
+               <a href="https://google.com">Forgot password?</a>
+             </div>
      
-              </div>
-              
-              <small id="emailHelp" class="form-text" style="color: blue;">Forget Password?</small>
-             <br>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                <br>
-              </div>
-              <button type="submit" onclick="validate();" class="btn btn-primary">Sign in</button>           
-            </form>                               
+             <button type="submit" class="btn btn-primary btn-block">Login</button>
+      
+             <p class="message">Not registered? <a href="signup.html">Create an account</a></p>
+     
+           </form>
+                                   
   </div>      
         </div>
           </div>

@@ -6,6 +6,7 @@
     <title>SIGN UP</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/signup.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/favicon-32x32.png" type="image/gif" sizes="16*16">
 
@@ -86,68 +87,70 @@
       </div>
 
   </div>
-     
-      
+        
+    <form id="sign" action="login.html" onsubmit="return validate()">
+      <h1>Create an Account</h1>
 
-  <div class="register">
-    <form   id="register"action="login" onsubmit="return validate()" >
+         <div class="row">
+          <div class="col-md-6">
+          <div class="form-group">
+            <label for="FName">First Name</label>
+            <input type="text" class="form-control" id="FName" placeholder="First Name"> 
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="LName">Last Name</label>
+            <input type="text" class="form-control" id="LName" placeholder="Last Name"> 
+          </div>
+        </div>
+        </div>
 
-    <h2> Create Account</h2>
-    
-    <label for=""> First Name : <span style="color: red;">*</span></label> <br>
-    <input type="text" name="Fname" class="name" id="Fname" autocomplete="off"
-    placeholder="Enter First Name"> <br>
-    <span id="Fnames" style="color: red;font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
 
-    <label for="">Last Name :<span style="color: red;">*</span></label> <br>
-    <input type="text" name="Lname" class="name" id="Lname"
-    placeholder="Enter Last Name"> <br>
-    <span id="Lnames" style="color: red;font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
+        <div class="row">
+          <div class="col-md-6">
+          <div class="form-group">
+            <label for="UserName" >Username</label>
+            <input type="text" class="form-control" id="UserName" placeholder="Desired username" > 
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number </label>
+            <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
+          </div>
+        </div>
+        </div>
 
-    <label for="">Mobile Number : <span style="color: red;">*</span></label> <br>
-    <select name="" id="ph">
-        <option value="">+91</option>
-        <option value="">+92</option>
-        <option value="">+93</option>
-        <option value="">+94</option>
-        <option value="">+95</option>
-    </select>
-    <input type="text" name="Mnumber" id="number"
-    placeholder="Enter MobileNumber"> <br>
-    <span id="numbers" style="color: red;font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
 
-    <label for="">Email : <span style="color: red;">*</span></label> <br>
-    <input type="text" name="email" class="name" id="email"
-    placeholder="Enter Email"> <br>
-    <span id="emails" style="color: red; font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
 
-    <label for="">Password : <span style="color: red;">*</span></label> <br>
-    <input type="password" name="Password" class="name"  id="pwd"
-     placeholder="Enter Password"> <br>
-     <span id="pwds" style="color: red; font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
-     
-     <div class="progress" id="prog">
-        <div class="progress-bar" id="strength" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="form-group">
+            <label for="inputEmail">Email Address</label>
+            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+          </div>
+        <div class="row">
+         <div class="col-md-6">
+          <div class="form-group">
+            <label for="InputPassword1">Password </label>
+            <input type="password" class="form-control" id="InputPassword1" placeholder="password"><br>
+            <div class="progress" id="prog">
+              <div class="progress-bar" id="strength" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div id="strength1"></div>
+          </div>
+        </div>
+           <div class="col-md-6">
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password </label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
+          </div>
+        </div>
       </div>
-      <div id="strength1"></div><br>
+          <button type="submit" class="btn btn-primary btn-block">Register</button>
 
-    <label for="">Re Enter Password : <span style="color: red;">*</span></label> <br>
-    <input type="password" name="Password" class="name" id="cnfpwd"
-    placeholder="Re Enter Password"> <br>
-    <span id="cnfpwds" style="color: red; font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
+          <p class="msg">Already a member? <a href="login.html">Login here</a></p>
 
-    <!-- <input id="gender" type="radio" name="male" id="male"><span id="males" >&nbsp; Male</span>&nbsp;&nbsp;
-    <input id="gender" type="radio" name="male" id="male"><span id="males">&nbsp; Female</span>&nbsp;&nbsp;
-    <input id="gender" type="radio" name="male" id="male"><span id="males"> &nbsp; Other</span>&nbsp;&nbsp;
-    <br> -->
-    <span id="message" style="color: red; font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span>
-    
-    <br>
-    
-    <!-- <a href="drop.html"> -->
-    <input type="submit"  value="Submit" id="sub">
-    
-</form>
+        </form>
 
 </div>
   </div>

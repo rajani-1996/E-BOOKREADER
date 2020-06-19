@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,15 +22,16 @@
       <ul class="navbar-nav mr-auto">
 
         <li class="nav-item active">
-          <a class="nav-link-light btn btn-outline-light" href="/">HOME</a>
-        </li> 
-
-        <% for(i=0;i<nav.length;i++){%>
-        <li class="nav-item active ">
-          <a class="nav-link-light btn btn-outline-light" href="<%=nav[i].link%>"><%=nav[i].name%><span class="sr-only">(current)</span></a>
-        </li>
-        <%}%>
-      </ul>            
+            <a class="nav-link-light btn btn-outline-light" href="/">HOME</a>
+          </li> 
+  
+          <% for(i=0;i<nav.length;i++){%>
+          <li class="nav-item active ">
+            <a class="nav-link-light btn btn-outline-light" href="<%=nav[i].link%>"><%=nav[i].name%><span class="sr-only">(current)</span></a>
+          </li>
+          <%}%>
+        </ul>
+            </form>              
         </div>
        
       </nav>
@@ -43,66 +44,18 @@
 
 <br>
 <br>
-<div class="container" style="border:solid 3px white;">
-<h2>FICTION</h2>
-<br>
-<br>
-  <div class="card-deck" style="margin-left: 5%; margin-right: 5%;" >
+<<div class="card-deck" style="margin-left: 35%; margin-right: 5%; width: 26rem; " >
 
-    <% for(i=0;i<ebooks.length;i++){%>
-        <div class="card">
+    <div class="card">
 
-          <img src="/images/<%=ebooks[i].img%>" class="card-img-top" alt="1">
-          <div class="card-body">
-            <h5 class="card-title"><%=ebooks[i].title%></h5>
-            <p class="card-text"><%=ebooks[i].author%></p>
-            <p class="card-text"><%=ebooks[i].genre%></p>
-            <p class="card-text"><%=ebooks[i].link%></p>
-            <!-- <a href="<%=ebooks[i].link%>" style="color:rgb(190, 41, 41);"></a> -->
-            <a href="/ebooks/<%=i%>" class="btn btn-secondary" style="margin-left: 35%;">Read More</a>
-          </div>
-        </div>
-        <%}%>
-  </div>
-
-<br>
-<br>
-
-       <div class="card-deck"style="margin-left: 5%; margin-right: 5%;">
-
-        <% for(i=0;i<ebooks2.length;i++){%>
-        <div class="card">
-          <img src="/images/<%=ebooks2[i].img%>" class="card-img-top" alt="1">
-          <div class="card-body">
-            <h5 class="card-title"><%=ebooks2[i].title%></h5>
-            <p class="card-text"><%=ebooks2[i].author%></p>
-            <p class="card-text"><%=ebooks2[i].genre%></p>
-            <p class="card-text"><%=ebooks2[i].link%></p>
-            <a href="/ebooks2/<%=i%>" class="btn btn-secondary"  style="margin-left: 35%;">Read More</a>
-          </div>
-        </div>
-        <%}%>
+      <img src="/images/<%=ebookSingle.img%>" class="card-img-top" alt="1">
+      <div class="card-body">
+        <h5 class="card-title"><%=ebookSingle.title%></h5>
+        <p class="card-text"><%=ebookSingle.author%></p>
+        <p class="card-text"><%=ebookSingle.genre%></p>
+        
       </div>
-      <br>
-      <br>
-      <h2>Thriller</h2>
-      <br><br>
-
-<div class="card-deck" style="margin-left: 5%; margin-right: 5%;" >
-
-  <% for(i=0;i<ebooks3.length;i++){%>
-      <div class="card">
-
-        <img src="/images/<%=ebooks3[i].img%>" class="card-img-top" alt="1">
-        <div class="card-body">
-          <h5 class="card-title"><%=ebooks3[i].title%></h5>
-          <p class="card-text"><%=ebooks3[i].author%></p>
-          <p class="card-text"><%=ebooks3[i].genre%></p>
-          <!-- <p class="card-text"><%=ebooks3[i].link%></p> -->
-          <a href="/ebooks3/<%=i%>" class="btn btn-secondary" style="margin-left: 35%;">Read More</a>
-        </div>
-      </div>
-      <%}%>
+    </div>
 </div>
 
 <br>
@@ -166,4 +119,4 @@
       
 
 </body>
-</html>
+</html> -->

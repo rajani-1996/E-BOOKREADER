@@ -3,7 +3,7 @@ const app = express();
 const nav =
 [
     {
-        link:'/books',name:'BOOKS'
+        link:'/ebooks',name:'BOOKS'
     }, 
     
     {

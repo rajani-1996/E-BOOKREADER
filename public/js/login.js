@@ -1,59 +1,34 @@
-let email = document.getElementById("email");
-let pwd = document.getElementById("pwd");
+function validate(){
+
+    let email= document.getElementById('inputEmail').value;
+    let pass= document.getElementById('InputPassword1');  
+    let regexp=/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)\.([a-z]{2,3})(.[a-z]{2,3})?$/;
+    var passregexp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
     
-        
-    //email validation//
 
-        function validate() {
-                  
-        let emailcheck = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$/;
-        // let pwdcheck = /^(?=.*[0-9])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
-
-
-            if (emailcheck.test(email.value)){
-                document.getElementById('emailerror').innerHTML="";
-                }
-
-            else{
-                document.getElementById('emailerror').innerHTML="** email is invalid**";
-                 return false;
-                }
-
-            //password validation//
+   
+if(email.value=="")
+{
+ alert("All fields are required");
+ return false;
+}
+else if(regexp.test(email)==false)
+{
+  alert("Enter a valid email id");
+  return false;
+}
 
 
-            if (pwd.value == "") {
-                document.getElementById('pwds').innerHTML = " **Please enter a valid password**";
-                return false;
-                }
-    
-                else if (pwd.value.length <=8) {
-                document.getElementById('pwds').innerHTML = "*Minimum 8 characters required*";
-                return false;
-                }
-    
-                else if (pwd.value.search (/[0-9]/) ==-1) {
-                document.getElementById('pwds').innerHTML = " *Atleast one number*";
-                return false;
-                }
-    
-                else if (pwd.value.search (/[a-z]/) ==-1) {
-                document.getElementById('pwds').innerHTML = " *Atleast one lowercase letter*";
-                return false;
-                }
-    
-                else if (pwd.value.search (/[A-Z]/) ==-1) {
-                document.getElementById('pwds').innerHTML = " *Atleast one uppercase letter*";
-                return false;
-                }
-                else if (pwd.value.search (/[!@#$%^&*]/) ==-1) {
-                document.getElementById('pwds').innerHTML = " *Atleast one symbol*";
-                return false;
-                }
-        
-                else (pwd.value);{
-                document.getElementById('pwds').innerHTML = "";
-                }
-    
-    
+if(pass.value=="")
+{
+ alert("All fields are required");
+ return false;
+}
+
+else if(passregexp.test(pass.value)==false)
+{
+  alert("Enter valid password");
+  return false;
+}
+
 }
