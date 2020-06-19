@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKS</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="images/favicon-32x32.png" type="image/gif" sizes="16*16">
+    <link rel="stylesheet" href="css/genres.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+<body>
+    
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <img src="images/icon.jpg" height="40" width="40">
+    <a class="navbar-brand" href="#"></a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link-light btn btn-outline-light" href="/">HOME</a>
+        </li> 
+
+        <% for(i=0;i<nav.length;i++){%>
+        <li class="nav-item active ">
+          <a class="nav-link-light btn btn-outline-light" href="<%=nav[i].link%>"><%=nav[i].name%><span class="sr-only">(current)</span></a>
+        </li>
+        <%}%>
+      </ul>            
+        </div>
+       
+      </nav>
+      <h1>
+        <div class="scroll-left ">
+          <p>HAPPY READING!!!</p>
+      </div>
+    </h1>
+
+
+<br>
+<br>
+<div class="container" style="border:solid 3px white;">
+<h2>FICTION</h2>
+<br>
+<br>
+  <div class="card-deck" style="margin-left: 5%; margin-right: 5%;" >
+
+    <% for(i=0;i<ebooks.length;i++){%>
+        <div class="card">
+
+          <img src="/images/<%=ebooks[i].img%>" class="card-img-top" alt="1">
+          <div class="card-body">
+            <h5 class="card-title"><%=ebooks[i].title%></h5>
+            <p class="card-text"><%=ebooks[i].author%></p>
+            <p class="card-text"><%=ebooks[i].genre%></p>
+            <p class="card-text"><%=ebooks[i].link%></p>
+            <a href="/ebooks/<%=i%>" class="btn btn-secondary" style="margin-left: 35%;">Read More</a>
+          </div>
+        </div>
+        <%}%>
+  </div>
+
+<br>
+<br>
+
+       <div class="card-deck"style="margin-left: 5%; margin-right: 5%;">
+
+        <% for(i=0;i<ebooks2.length;i++){%>
+        <div class="card">
+          <img src="/images/<%=ebooks2[i].img%>" class="card-img-top" alt="1">
+          <div class="card-body">
+            <h5 class="card-title"><%=ebooks2[i].title%></h5>
+            <p class="card-text"><%=ebooks2[i].author%></p>
+            <p class="card-text"><%=ebooks2[i].genre%></p>
+            <p class="card-text"><%=ebooks2[i].link%></p>
+            <a href="/ebooks2/<%=i%>" class="btn btn-secondary"  style="margin-left: 35%;">Read More</a>
+          </div>
+        </div>
+        <%}%>
+      </div>
+      <br>
+      <br>
+      <h2>Thriller</h2>
+      <br><br>
+
+<div class="card-deck" style="margin-left: 5%; margin-right: 5%;" >
+
+  <% for(i=0;i<ebooks3.length;i++){%>
+      <div class="card">
+
+        <img src="/images/<%=ebooks3[i].img%>" class="card-img-top" alt="1">
+        <div class="card-body">
+          <h5 class="card-title"><%=ebooks3[i].title%></h5>
+          <p class="card-text"><%=ebooks3[i].author%></p>
+          <p class="card-text"><%=ebooks3[i].genre%></p>
+          <!-- <p class="card-text"><%=ebooks3[i].link%></p> -->
+          <a href="/ebooks3/<%=i%>" class="btn btn-secondary" style="margin-left: 35%;">Read More</a>
+        </div>
+      </div>
+      <%}%>
+</div>
+
+<br>
+<br>
+<h2>Classics</h2><br><br>
+
+    <div class="card-deck"style="margin-left: 5%; margin-right: 5%;">
+
+      <% for(i=0;i<ebooks4.length;i++){%>
+      <div class="card">
+        <img src="/images/<%=ebooks4[i].img%>" class="card-img-top" alt="1">
+        <div class="card-body">
+          <h5 class="card-title"><%=ebooks4[i].title%></h5>
+          <p class="card-text"><%=ebooks4[i].author%></p>
+          <p class="card-text"><%=ebooks4[i].genre%></p>
+          <a href="/ebooks4/<%=i%>" class="btn btn-secondary"  style="margin-left: 35%;">Read More</a>
+        </div>
+      </div>
+      <%}%> 
+
+    </div>
+
+  </div>
+      <br>
+      <br>
+
+<br>
+      <div class="spinner-grow text-muted "></div>
+      <div class="spinner-grow text-primary "></div>
+      <div class="spinner-grow text-success "></div>
+      <div class="spinner-grow text-info "></div>
+      <div class="spinner-grow text-warning "></div>
+      <div class="spinner-grow text-danger "></div>
+      <div class="spinner-grow text-secondary "></div>
+      <div class="spinner-grow text-dark "></div>
+      <div class="spinner-grow text-info "></div>
+      <div class="spinner-grow text-warning "></div>
+      <div class="spinner-grow text-danger "></div>
+      <div class="spinner-grow text-light "></div>
+
+
+
+<div class="card w-100">
+    <div class="card text-center">
+        <div class="card-header">
+           E-BookReader
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Copyright © 2020.All Rights Reserved</h5>
+           
+           
+        </div>
+       
+    </div>
+    </div>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="js/index.js"></script>
+      
+
+</body>
+</html>

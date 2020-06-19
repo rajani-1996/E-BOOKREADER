@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NARRATIVE</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color:rgb(245, 246, 247);">
+    <header>
+       
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <img src="images/icon.jpg" height="40" width="40">
+    <a class="navbar-brand" href="#"></a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link-light btn btn-outline-light" href="/">HOME</a>
+        </li> 
+
+        <% for(i=0;i<nav.length;i++){%>
+        <li class="nav-item active ">
+          <a class="nav-link-light btn btn-outline-light" href="<%=nav[i].link%>"><%=nav[i].name%><span class="sr-only">(current)</span></a>
+        </li>
+        <%}%>
+      </ul>
+          <form style="margin-right: 40px;">
+            <% for(i=0;i<navSign.length;i++){%>
+            <a class="btn btn-outline-light" href="<%=navSign[i].Link%>"><%=navSign[i].Name%> </a>
+            <%}%> 
+          </form>  
+                              </div>
+                               </nav>
+    </header>
+
+    <div class="container" style="color: rgb(253, 250, 244);background-color: rgb(245, 176, 176);">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6" margin:30px;padding: 25px;>
+                    <form action="/authors/add" method="GET" name="addauthor">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Author name</label>
+                            <input type="input" class="form-control" name="author" id="author">
+                            <label for="exampleInputPassword1">Details</label>
+                            <input type="input" class="form-control" name="detail" id="detail">
+                            <label for="exampleInputPassword1">Image</label>
+                            <input type="file" class="form-control" name="image" id="image">
+                        </div>
+                        <center><button type="submit" class="btn btn-secondary">Add Author</button></center>
+                    </form>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+    
+   
+</body>
+
+</html> -->

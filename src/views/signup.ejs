@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon-32x32.png" type="image/gif" sizes="16*16">
+
+    
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <img src="images/icon.jpg" height="40" width="40">
+    <a class="navbar-brand" href="#"></a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link-light btn btn-outline-light" href="/">HOME</a>
+        </li> 
+
+        <% for(i=0;i<nav.length;i++){%>
+        <li class="nav-item active ">
+          <a class="nav-link-light btn btn-outline-light" href="<%=nav[i].link%>"><%=nav[i].name%><span class="sr-only">(current)</span></a>
+        </li>
+        <%}%>
+      </ul>
+          <form style="margin-right: 40px;">
+            <% for(i=0;i<navSign.length;i++){%>
+            <a class="btn btn-outline-light" href="<%=navSign[i].Link%>"><%=navSign[i].Name%> </a>
+            <%}%> 
+          </form>       
+        </div>
+       
+      </nav>
+
+      <h1>
+        <div class="scroll-left ">
+          <p>SIGN UP</p>
+      </div>
+    </h1>
+
+<div class="container" style="border:solid 3px white;">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/quote1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/quote2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/quote3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/quote5.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/quote6.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/quote7.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/quots8.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+  </div>
+     
+      
+
+  <div class="register">
+    <form   id="register"action="login" onsubmit="return validate()" >
+
+    <h2> Create Account</h2>
+    
+    <label for=""> First Name : <span style="color: red;">*</span></label> <br>
+    <input type="text" name="Fname" class="name" id="Fname" autocomplete="off"
+    placeholder="Enter First Name"> <br>
+    <span id="Fnames" style="color: red;font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
+
+    <label for="">Last Name :<span style="color: red;">*</span></label> <br>
+    <input type="text" name="Lname" class="name" id="Lname"
+    placeholder="Enter Last Name"> <br>
+    <span id="Lnames" style="color: red;font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
+
+    <label for="">Mobile Number : <span style="color: red;">*</span></label> <br>
+    <select name="" id="ph">
+        <option value="">+91</option>
+        <option value="">+92</option>
+        <option value="">+93</option>
+        <option value="">+94</option>
+        <option value="">+95</option>
+    </select>
+    <input type="text" name="Mnumber" id="number"
+    placeholder="Enter MobileNumber"> <br>
+    <span id="numbers" style="color: red;font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
+
+    <label for="">Email : <span style="color: red;">*</span></label> <br>
+    <input type="text" name="email" class="name" id="email"
+    placeholder="Enter Email"> <br>
+    <span id="emails" style="color: red; font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
+
+    <label for="">Password : <span style="color: red;">*</span></label> <br>
+    <input type="password" name="Password" class="name"  id="pwd"
+     placeholder="Enter Password"> <br>
+     <span id="pwds" style="color: red; font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
+     
+     <div class="progress" id="prog">
+        <div class="progress-bar" id="strength" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <div id="strength1"></div><br>
+
+    <label for="">Re Enter Password : <span style="color: red;">*</span></label> <br>
+    <input type="password" name="Password" class="name" id="cnfpwd"
+    placeholder="Re Enter Password"> <br>
+    <span id="cnfpwds" style="color: red; font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span><br> 
+
+    <!-- <input id="gender" type="radio" name="male" id="male"><span id="males" >&nbsp; Male</span>&nbsp;&nbsp;
+    <input id="gender" type="radio" name="male" id="male"><span id="males">&nbsp; Female</span>&nbsp;&nbsp;
+    <input id="gender" type="radio" name="male" id="male"><span id="males"> &nbsp; Other</span>&nbsp;&nbsp;
+    <br> -->
+    <span id="message" style="color: red; font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </span>
+    
+    <br>
+    
+    <!-- <a href="drop.html"> -->
+    <input type="submit"  value="Submit" id="sub">
+    
+</form>
+
+</div>
+  </div>
+    </div>
+<div class="card w-100">
+    <div class="card text-center">
+        <div class="card-header">
+           E-BookReader
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Copyright © 2020.All Rights Reserved</h5>
+           
+           
+        </div>
+       
+    </div>
+
+<script src="js/signup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
